@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Paste Image</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div style="width: 200px; border: 1px solid grey; padding: 10px" id="pasteTarget">
+        Click and paste here.
+    </div>
+    <h3>base64image</h3>
+    <form action="handle.php" method="POST">
+        <br>
+        <textarea id="base64image" name="imgTxt" style="width:100%;height:300px;"></textarea>
+        <br>
+        <button type="submit">
+            SUMBIT
+        </button>
+    </form>
+
+    <!-- MODAL -->
+    <button id="btnPrevModal">Open Modal</button>
+    <div id="prevModal" class="preview-modal">
+        <div class="preview-modal-content">
+            <span class="close-modal" id="closePrevModal">&times;</span>
+            <div class="modal-image">
+                <!-- canvas for catch base64 image -->
+                <canvas id="canvasTarget" style="border: 1px solid red; display: none;"></canvas>
+                <img id="imageTarget" alt="image canvas">
+            </div>
+            <button id="btnRotate">rotate</button>
+        </div>
+    </div>
+    <!-- END MODAL -->
+
+</body>
+
+<script src="script.js"></script>
+</html>
